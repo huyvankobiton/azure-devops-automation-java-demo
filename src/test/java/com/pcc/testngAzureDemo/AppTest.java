@@ -27,7 +27,7 @@ public class AppTest {
 	  
 	  
     //The generated session will be visible to you only. 
-    String kobitonServerUrl = "https://" + System.getenv("KOBITON_USERNAME") + ":" + System.getenv("KOBITON_API_KEY") + "@api.kobiton.com/wd/hub";
+    String kobitonServerUrl = "https://" + System.getenv("kobitonadmin") + ":" + System.getenv("05bcba8c-fe7e-41c7-add8-c0e3e9eb5a02") + "@api-test.kobiton.com/wd/hub";
     DesiredCapabilities capabilities = new DesiredCapabilities();
     // The generated session will be visible to you only. 
     capabilities.setCapability("sessionName", "PMO test");
