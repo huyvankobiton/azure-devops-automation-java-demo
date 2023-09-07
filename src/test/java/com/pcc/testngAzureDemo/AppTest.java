@@ -76,14 +76,14 @@ public class AppTest {
     driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
   }
 
-  @AfterSuite
-  public void uninstallApp() throws InterruptedException {
-  System.out.println("After Suite");
-    driver.removeApp("io.appium.android.apis" );
-    String kobitonSessionId = driver.getSessionDetails().get("kobitonSessionId").toString();
-    System.out.println("kobitonSessionId: " + kobitonSessionId);
-    driver.quit();
-  }
+  // @AfterSuite
+  // public void uninstallApp() throws InterruptedException {
+  // System.out.println("After Suite");
+  //   driver.removeApp("io.appium.android.apis" );
+  //   String kobitonSessionId = driver.getSessionDetails().get("kobitonSessionId").toString();
+  //   System.out.println("kobitonSessionId: " + kobitonSessionId);
+  //   driver.quit();
+  // }
 
   @Test (enabled=true) public void myFirstTest() throws InterruptedException {
     System.out.println("First Test");
