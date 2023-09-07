@@ -85,12 +85,17 @@ public class AppTest {
     // System.out.println("kobitonSessionId: " + kobitonSessionId);
     // System.out.println("getCommandExecutor: " + driver.getCommandExecutor());
     System.out.println("# Test Execution Log - Bitrise");
-    System.out.println("**Date:**" + System.currentTimeMillis());
+
+    long yourmilliseconds = System.currentTimeMillis();
+    SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");    
+    Date resultdate = new Date(yourmilliseconds);
+    System.out.println("**Date:**" + sdf.format(resultdate));
+
     System.out.println("### Test Device Used");
-    System.out.println("  - " + kobitonDeviceName + "(" + driver.getPlatformName() + driver.getSessionDetails().get("platformVersion").toString() + ") " + "- UIID: " + driver.getSessionDetails().get("udid").toString());
+    System.out.println("  - " + kobitonDeviceName + " (" + driver.getPlatformName() + " " + driver.getSessionDetails().get("platformVersion").toString() + ") " + "- UIID: " + driver.getSessionDetails().get("udid").toString());
     System.out.println("  - Session URL: " + driver.getRemoteAddress() + "/" + kobitonSessionId);
     if (driver != null) {
-      System.out.println("Quitting the driver.");
+      // System.out.println("Quitting the driver.");
       driver.quit();
     }
   }
