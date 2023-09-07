@@ -83,17 +83,23 @@ public class AppTest {
     System.out.println("kobitonSessionId: " + kobitonSessionId);
 
     if (driver != null) {
+      System.out.println("Quitting the driver.");
       driver.quit();
     }
   }
 
   @Test (enabled=true) public void myFirstTest() throws InterruptedException {
     System.out.println("First Test");
+
+    Thread.sleep(5000);
+
+    driver.get("https://www.google.com");
+
     Thread.sleep(5000);
 
     System.out.println("1");
     System.out.println("2");
-    
+
     Thread.sleep(5000);
   }
 }
