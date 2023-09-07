@@ -81,6 +81,7 @@ public class AppTest {
     System.out.println("After Suite");
     String kobitonSessionId = driver.getSessionDetails().get("kobitonSessionId").toString();
     System.out.println("kobitonSessionId: " + kobitonSessionId);
+    System.out.println("getCommandExecutor: " + driver.getCommandExecutor());
 
     if (driver != null) {
       System.out.println("Quitting the driver.");
