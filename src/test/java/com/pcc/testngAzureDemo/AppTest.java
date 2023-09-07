@@ -27,34 +27,46 @@ public class AppTest {
 	  
 	  
     //The generated session will be visible to you only. 
-    String kobitonServerUrl = "https://" + System.getenv("kobitonadmin+businesscloud") + ":" + System.getenv("884f4fc8-3fbe-42d0-90f3-3fa706d6554a") + "@api.kobiton.com/wd/hub";
+    String kobitonServerUrl = "https://" + "kobitonadmin+businesscloud" + ":" + "884f4fc8-3fbe-42d0-90f3-3fa706d6554a" + "@api.kobiton.com/wd/hub";
     DesiredCapabilities capabilities = new DesiredCapabilities();
     // The generated session will be visible to you only. 
     capabilities.setCapability("sessionName", "PMO test executor");
     capabilities.setCapability("sessionDescription", "automation");
     capabilities.setCapability("deviceOrientation", "portrait");
+    capabilities.setCapability("noReset", true);
+    capabilities.setCapability("fullReset", false);
     capabilities.setCapability("captureScreenshots", true);
+    capabilities.setCapability("useConfiguration", "");
+    capabilities.setCapability("autoWebview", true);
+    capabilities.setCapability("browserName", "chrome");
     // The maximum size of application is 500MB
     // By default, HTTP requests from testing library are expired
     // in 2 minutes while the app copying and installation may
     // take up-to 30 minutes. Therefore, you need to extend the HTTP
     // request timeout duration in your testing library so that
     // it doesn't interrupt while the device is being initialized.
-    String app = System.getenv("KOBITON_SESSION_APPLICATION") != null ? System.getenv("KOBITON_SESSION_APPLICATION") : "kobiton-store:91041";
-    capabilities.setCapability("app", app);
+    // String app = System.getenv("KOBITON_SESSION_APPLICATION") != null ? System.getenv("KOBITON_SESSION_APPLICATION") : "kobiton-store:91041";
+    // capabilities.setCapability("app", app);
 
-    capabilities.setCapability("deviceGroup", "KOBITON");
+    capabilities.setCapability("groupId", 3159); // Group: ROYAL
+    capabilities.setCapability("deviceGroup", "ORGANIZATION");
     // For deviceName, platformVersion Kobiton supports wildcard
     // character *, with 3 formats: *text, text* and *text*
     // If there is no *, Kobiton will match the exact text provided
     
-    String deviceName = System.getenv("KOBITON_DEVICE_NAME") != null ? System.getenv("KOBITON_DEVICE_NAME") : "Galaxy*";
-    String platformVersion = System.getenv("KOBITON_SESSION_PLATFORM_VERSION") != null ? System.getenv("KOBITON_SESSION_PLATFORM_VERSION") : "6*";
-    String platformName = System.getenv("KOBITON_DEVICE_PLATFORM_NAME") != null ? System.getenv("KOBITON_DEVICE_PLATFORM_NAME") : "android";
+    // String deviceName = System.getenv("KOBITON_DEVICE_NAME") != null ? System.getenv("KOBITON_DEVICE_NAME") : "Galaxy*";
+    // String platformVersion = System.getenv("KOBITON_SESSION_PLATFORM_VERSION") != null ? System.getenv("KOBITON_SESSION_PLATFORM_VERSION") : "6*";
+    // String platformName = System.getenv("KOBITON_DEVICE_PLATFORM_NAME") != null ? System.getenv("KOBITON_DEVICE_PLATFORM_NAME") : "android";
     
-    capabilities.setCapability("deviceName", deviceName);
-    capabilities.setCapability("platformVersion", platformVersion);
-    capabilities.setCapability("platformName", platformName);
+    // capabilities.setCapability("deviceName", deviceName);
+    // capabilities.setCapability("platformVersion", platformVersion);
+    // capabilities.setCapability("platformName", platformName);
+    capabilities.setCapability("udid", "R3CN20NFKMM");
+    // capabilities.setCapability("deviceName", "Galaxy Note20 5G");
+    // capabilities.setCapability("tagName", "");
+    // capabilities.setCapability("platformVersion", "11");
+    // capabilities.setCapability("platformName", "Android");
+    // capabilities.setCapability("kobi:retainDurationInSeconds", 0);
 	  
     System.out.println(capabilities);
 
