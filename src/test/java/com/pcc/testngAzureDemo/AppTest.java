@@ -86,7 +86,7 @@ public class AppTest {
     System.out.println("getPageSource: " + driver.getPageSource());
     System.out.println("getTitle: " + driver.getTitle());
     System.out.println("getCapabilities: " + driver.getCapabilities());
-		System.out.println("getSessionDetail: " + driver.getSessionDetail());
+		System.out.println("getSessionDetails: " + driver.getSessionDetails());
 		System.out.println("getSessionId: " + driver.getSessionId());
 		System.out.println("getAutomationName: " + driver.getAutomationName());
 		System.out.println("getCommandExecutor: " + driver.getCommandExecutor());
