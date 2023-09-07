@@ -52,7 +52,7 @@ public class AppTest extends BaseTest {
     System.out.println("After Suite");
     String kobitonSessionId = driver.getSessionDetails().get("kobitonSessionId").toString();
     String kobitonDeviceName = driver.getSessionDetails().get("deviceName").toString();
-    System.out.println("getPageSource: " + driver.getPageSource());
+    // System.out.println("getPageSource: " + driver.getPageSource());
     System.out.println("getTitle: " + driver.getTitle());
     System.out.println("getCapabilities: " + driver.getCapabilities());
     System.out.println("getSessionDetails: " + driver.getSessionDetails());
