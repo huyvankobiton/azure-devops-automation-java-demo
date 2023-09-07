@@ -80,10 +80,15 @@ public class AppTest {
   public void uninstallApp() throws InterruptedException {
     System.out.println("After Suite");
     String kobitonSessionId = driver.getSessionDetails().get("kobitonSessionId").toString();
-    System.out.println("getSessionDetails: " + driver.getSessionDetails());
-    System.out.println("kobitonSessionId: " + kobitonSessionId);
-    System.out.println("getCommandExecutor: " + driver.getCommandExecutor());
-
+    String kobitonDeviceName = driver.getSessionDetails().get("deviceName").toString();
+    // System.out.println("getSessionDetails: " + driver.getSessionDetails());
+    // System.out.println("kobitonSessionId: " + kobitonSessionId);
+    // System.out.println("getCommandExecutor: " + driver.getCommandExecutor());
+    System.out.println("# Test Execution Log - Bitrise")
+    System.out.println("**Date:**" + System.currentTimeMillis())
+    System.out.println("### Test Device Used")
+    System.out.println("  - " + kobitonDeviceName + "(" + driver.getPlatformName() + driver.platformVersion() + ") " + "- UIID: " + driver.getSessionDetails().get("udid").toString())
+    System.out.println("  - Session URL: " + driver.getRemoteAddress() + "/" + kobitonSessionId);
     if (driver != null) {
       System.out.println("Quitting the driver.");
       driver.quit();
