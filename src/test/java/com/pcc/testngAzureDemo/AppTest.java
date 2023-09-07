@@ -83,15 +83,25 @@ public class AppTest {
     System.out.println("After Suite");
     String kobitonSessionId = driver.getSessionDetails().get("kobitonSessionId").toString();
     String kobitonDeviceName = driver.getSessionDetails().get("deviceName").toString();
-    System.out.println("getSessionDetails: " + driver.getSessionDetails());
+    System.out.println("getPageSource: " + driver.getPageSource());
+    System.out.println("getTitle: " + driver.getTitle());
+    System.out.println("getCapabilities: " + driver.getCapabilities());
+		System.out.println("getSessionDetail: " + driver.getSessionDetail());
+		System.out.println("getSessionId: " + driver.getSessionId());
+		System.out.println("getAutomationName: " + driver.getAutomationName());
+		System.out.println("getCommandExecutor: " + driver.getCommandExecutor());
+		System.out.println("getErrorHandler: " + driver.getErrorHandler());
+		System.out.println("getPlatformName: " + driver.getPlatformName());
+		System.out.println("getRemoteAddress: " + driver.getRemoteAddress());
+		System.out.println("getExecuteMethod: " + driver.getExecuteMethod());
     // System.out.println("kobitonSessionId: " + kobitonSessionId);
     // System.out.println("getCommandExecutor: " + driver.getCommandExecutor());
     System.out.println("# Test Execution Log - Bitrise");
 
     long yourmilliseconds = System.currentTimeMillis();
-    SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");    
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");    
     Date resultdate = new Date(yourmilliseconds);
-    System.out.println("**Date:**" + sdf.format(resultdate));
+    System.out.println("**Date:** " + sdf.format(resultdate));
 
     System.out.println("### Test Device Used");
     System.out.println("  - " + kobitonDeviceName + " (" + driver.getPlatformName() + " " + driver.getSessionDetails().get("platformVersion").toString() + ") " + "- UIID: " + driver.getSessionDetails().get("udid").toString());
