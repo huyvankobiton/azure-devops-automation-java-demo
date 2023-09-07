@@ -80,6 +80,7 @@ public class AppTest {
   public void uninstallApp() throws InterruptedException {
     System.out.println("After Suite");
     String kobitonSessionId = driver.getSessionDetails().get("kobitonSessionId").toString();
+    System.out.println("getSessionDetails: " + driver.getSessionDetails());
     System.out.println("kobitonSessionId: " + kobitonSessionId);
     System.out.println("getCommandExecutor: " + driver.getCommandExecutor());
 
@@ -91,16 +92,11 @@ public class AppTest {
 
   @Test (enabled=true) public void myFirstTest() throws InterruptedException {
     System.out.println("First Test");
-
-    Thread.sleep(5000);
-
-    driver.get("https://www.google.com");
-
-    Thread.sleep(5000);
-
+    driver.get("http://google.com/");
     System.out.println("1");
-    System.out.println("2");
-
     Thread.sleep(5000);
+	  driver.findElementByName("q").sendKeys("Kobiton");
+    System.out.println("2");
+	  Thread.sleep(10000);
   }
 }
