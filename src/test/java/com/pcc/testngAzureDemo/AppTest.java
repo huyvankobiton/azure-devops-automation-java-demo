@@ -27,11 +27,11 @@ public class AppTest {
 	  
 	  
     //The generated session will be visible to you only. 
-    String kobitonServerUrl = "https://" + System.getenv("kobitonadmin") + ":" + System.getenv("05bcba8c-fe7e-41c7-add8-c0e3e9eb5a02") + "@api-test.kobiton.com/wd/hub";
+    String kobitonServerUrl = "https://" + System.getenv("kobitonadmin+businesscloud") + ":" + System.getenv("884f4fc8-3fbe-42d0-90f3-3fa706d6554a") + "@api.kobiton.com/wd/hub";
     DesiredCapabilities capabilities = new DesiredCapabilities();
     // The generated session will be visible to you only. 
-    capabilities.setCapability("sessionName", "PMO test");
-    capabilities.setCapability("sessionDescription", "abc");
+    capabilities.setCapability("sessionName", "PMO test executor");
+    capabilities.setCapability("sessionDescription", "automation");
     capabilities.setCapability("deviceOrientation", "portrait");
     capabilities.setCapability("captureScreenshots", true);
     // The maximum size of application is 500MB
