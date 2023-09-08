@@ -14,7 +14,7 @@ import java.util.Base64;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeSuite;
 import static org.testng.util.Strings.isNullOrEmpty;
 
 public class BaseTest extends TestListenerAdapter {
@@ -37,7 +37,7 @@ public class BaseTest extends TestListenerAdapter {
         }
     }
 
-    @BeforeTest
+    @BeforeSuite
     protected void Setup() throws Exception {
         if (isNullOrEmpty(username)) {
             Assert.fail("Username was missing");
