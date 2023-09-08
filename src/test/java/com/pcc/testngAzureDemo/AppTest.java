@@ -41,7 +41,8 @@ public class AppTest extends BaseTest {
     capabilities.setCapability("deviceGroup", "ORGANIZATION");
     capabilities.setCapability("udid", "R3CN20NFKMM");
 	  
-    System.out.println(capabilities);
+    System.out.println('capabilities' + capabilities);
+    System.out.println('getAutomationUrl' + getAutomationUrl());
 
     driver = new AndroidDriver<MobileElement>(getAutomationUrl(), capabilities);
     driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
