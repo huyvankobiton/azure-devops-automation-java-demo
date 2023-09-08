@@ -10,20 +10,14 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.AfterSuite;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.*;
 
-import org.testng.annotations.Test;
 import org.testng.Assert;
-import io.appium.java_client.MobileElement;
-
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 
 public class AppTest extends BaseTest {
-  public static DesiredCapabilities capabilities;
-  public static AndroidDriver<MobileElement> driver;
-  @BeforeSuite
+  private RemoteWebDriver driver = null;
+  @BeforeTest
   public void setupAppium() throws Exception {
     super.Setup();
 
@@ -44,12 +38,12 @@ public class AppTest extends BaseTest {
     System.out.println("capabilities" + capabilities);
     System.out.println("getAutomationUrl" + getAutomationUrl());
 
-    driver = new AndroidDriver<MobileElement>(getAutomationUrl(), capabilities);
+    driver = new RemoteWebDriver(getAutomationUrl(), capabilities);
     driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
   }
 
-  @AfterSuite
-  public void uninstallApp() throws InterruptedException, IOException {
+  @AfterTest
+  public void uninstallApp() throws IOException {
     System.out.println("After Suite");
     String kobitonSessionId = driver.getSessionDetails().get("kobitonSessionId").toString();
     String kobitonDeviceName = driver.getSessionDetails().get("deviceName").toString();
