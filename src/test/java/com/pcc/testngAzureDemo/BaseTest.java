@@ -33,7 +33,7 @@ public class BaseTest extends TestListenerAdapter {
         }
 
         if (this.username != null && this.apiKey != null) {
-            this.automationUrl = String.format("https://%s:%s@%s/wd/hub", username, apiKey, hostName);
+            this.automationUrl = "https://" + this.username + this.apiKey + envHostName + "/wd/hub";
         }
     }
 
