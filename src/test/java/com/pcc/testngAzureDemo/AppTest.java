@@ -22,9 +22,9 @@ import io.appium.java_client.android.AndroidElement;
 
 public class AppTest extends BaseTest {
   public static DesiredCapabilities capabilities;
-  public static AndroidDriver<MobileElement> driver;
+  public static AndroidDriver<MobileElement> driver;x
   @BeforeSuite
-  public void setupAppium() throws MalformedURLException {
+  public void setupAppium() throws Exception {
     super.Setup();
 
     DesiredCapabilities capabilities = new DesiredCapabilities();
