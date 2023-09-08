@@ -22,7 +22,7 @@ import io.appium.java_client.android.AndroidElement;
 
 public class AppTest extends BaseTest {
   public static DesiredCapabilities capabilities;
-  public static AndroidDriver<MobileElement> driver;x
+  public static AndroidDriver<MobileElement> driver;
   @BeforeSuite
   public void setupAppium() throws Exception {
     super.Setup();
