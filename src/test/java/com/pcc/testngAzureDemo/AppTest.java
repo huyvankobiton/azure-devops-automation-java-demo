@@ -35,9 +35,9 @@ public class AppTest extends BaseTest {
     capabilities.setCapability("useConfiguration", "");
     capabilities.setCapability("autoWebview", true);
     capabilities.setCapability("browserName", "chrome");
-    capabilities.setCapability("groupId", 3159);
+    capabilities.setCapability("groupId", 512);
     capabilities.setCapability("deviceGroup", "ORGANIZATION");
-    capabilities.setCapability("udid", "9889d5354957375843"); // Custom input device
+    capabilities.setCapability("udid", "R58M20D1ELE"); // Custom input device
 //    String deviceName = System.getenv("KOBITON_DEVICE_NAME") != null ? System.getenv("KOBITON_DEVICE_NAME") : "Galaxy*";
 //    String platformVersion = System.getenv("KOBITON_SESSION_PLATFORM_VERSION") != null ? System.getenv("KOBITON_SESSION_PLATFORM_VERSION") : "6*";
 //    String platformName = System.getenv("KOBITON_DEVICE_PLATFORM_NAME") != null ? System.getenv("KOBITON_DEVICE_PLATFORM_NAME") : "android";

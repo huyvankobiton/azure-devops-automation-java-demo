@@ -21,13 +21,13 @@ public class BaseTest extends TestListenerAdapter {
     private String automationUrl;
     private final String username;
     private final String apiKey;
-    private String hostName = "api.kobiton.com";
+    private String hostName = "api-prod-blue.kobiton.com";
 
     public BaseTest() {
-        this.username = "kobitonadmin+businesscloud";
-        this.apiKey = "884f4fc8-3fbe-42d0-90f3-3fa706d6554a";
+        this.username = "kobitonadmin";
+        this.apiKey = "f3ec1011-c54a-4b20-bc8c-cfb1b94817e9";
 
-        String envHostName = "@api.kobiton.com";
+        String envHostName = "@api-prod-blue.kobiton.com";
         if (envHostName != null) {
             this.hostName = envHostName;
         }
