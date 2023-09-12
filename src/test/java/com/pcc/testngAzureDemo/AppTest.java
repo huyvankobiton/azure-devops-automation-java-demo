@@ -9,7 +9,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
@@ -101,13 +100,8 @@ public class AppTest extends BaseTest {
     driver.get("http://google.com/");
     System.out.println("1");
     Thread.sleep(5000);
-    MobileElement searchFieldE = driver.findElementByXPath("//input[@name='q']");
-    searchFieldE.sendKeys("Kobiton");
-    Thread.sleep(5000);
-    searchFieldE.sendKeys(Keys.ENTER);
-    driver.findElementByXPath("//a[@href='https://kobiton.com/']").click();
-    Thread.sleep(5000);
-    String message = driver.findElementByXPath("//div[@class='intro-message']/h2").getText();
+    driver.findElementByName("q").sendKeys("Kobiton");
+    System.out.println("2");
     Thread.sleep(10000);
   }
 }
